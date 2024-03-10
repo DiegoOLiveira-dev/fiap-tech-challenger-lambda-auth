@@ -29,7 +29,7 @@ provider:
   - Effect: Allow
     Action:
       - cognito-idp:AdminInitiateAuth
-      - cognito-idp:AdminCreateUser
+      - cognito-idp:AdmincriarUsuario
       - cognito-idp:AdminSetUserPassword
       - cognito-idp:AdminGetUser
     Resource: '*'
