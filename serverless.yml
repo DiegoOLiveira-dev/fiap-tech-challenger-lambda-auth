@@ -44,14 +44,14 @@ provider:
 
 functions:
   signUpClient:
-    handler: src/functions/signUpClient.handler
+    handler: src/funcoes/criarCliente.handler
     events:
       - httpApi:
           path: /api/signup
           method: post
 
   signUpAdmin:
-    handler: src/functions/signUpAdmin.handler
+    handler: src/funcoes/criarAdmin.handler
     events:
       - httpApi:
           path: /api/admin
