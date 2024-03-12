@@ -16,7 +16,7 @@ async function getToken(result: CognitoUserSession, identityPool: string | undef
     })
   });
   await client.config.credentials();
-  const accessToken = result.getAccessToken().getJwtToken();
+  const accessToken = result.getIdToken().getJwtToken();
   return accessToken;
 
 }
