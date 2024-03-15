@@ -1,6 +1,6 @@
 import { DeliveryMediumType } from '@aws-sdk/client-cognito-identity-provider';
 import { ICognitoUserPoolData } from 'amazon-cognito-identity-js';
-import { AdmincriarUsuarioRequest } from 'aws-sdk/clients/cognitoidentityserviceprovider';
+import { AdminCreateUserRequest } from 'aws-sdk/clients/cognitoidentityserviceprovider';
 
 export type AuthenticationDataType = {
   Username: string;
@@ -12,7 +12,7 @@ export type MessageActionType = {
   readonly SUPPRESS: 'SUPPRESS';
 };
 
-export interface ICognitoInput extends AdmincriarUsuarioRequest {
+export interface ICognitoInput extends AdminCreateUserRequest {
   UserPoolId: string;
   TemporaryPassword: string;
   Username: string;
