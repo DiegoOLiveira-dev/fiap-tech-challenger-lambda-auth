@@ -29,13 +29,12 @@ jobs:
         run: |          
           npm run lint
 
-      - name: Configure AWS Credentials
+      - name: Configurar AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
-          aws-region: us-east-1
-          role-duration-seconds: 1200
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1  # substitua pela sua região da AWS
 
       - name: Deploy to Lambda
         run: |
